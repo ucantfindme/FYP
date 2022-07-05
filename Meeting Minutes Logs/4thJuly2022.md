@@ -1,6 +1,5 @@
-# Week-1 Meeting Minutes
+# $th July, 2022 Meeting Minutes
 
-We had overall 2 meetings in this week<br>
 > **Date :** Monday, 4th July,2022<br>
 > **Time :** 10:30 PM<br>
 > **Location :** Discord<br>
