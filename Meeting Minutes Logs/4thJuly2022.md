@@ -1,4 +1,4 @@
-# $th July, 2022 Meeting Minutes
+# 4th July, 2022 Meeting Minutes
 
 > **Date :** Monday, 4th July,2022<br>
 > **Time :** 10:30 PM<br>
