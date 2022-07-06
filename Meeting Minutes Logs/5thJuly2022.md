@@ -1,4 +1,4 @@
-#5th July, 2022 Meeting Minutes
+# 5th July, 2022 Meeting Minutes
 
 > **Date :** Tuesday, 5th July,2022<br>
 > **Time :** 03:00 PM<br>
