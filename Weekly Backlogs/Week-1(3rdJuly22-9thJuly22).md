@@ -3,5 +3,5 @@
 | --- | --- | --- | --- | --- |
 | Sai Pavan | Github Repo creation, Architecture Planning and Process-flow Diagram | Learn web scraping and implement to extract images | Techniques and Algorithms existence | None |
 | Praneeth | | | | |
-| Gopi | | | |None|
+| Gopi |Searched algorithms for key words extraction in images|Learn Webscraping |Searching Algorithms|None|
 | Varun | | | | |
