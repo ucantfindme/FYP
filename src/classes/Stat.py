@@ -5,7 +5,7 @@ class Stat():
         self.allTimeBest = allTimeBest
         self.totalMatches = totalMatches
         self.wins = wins
-        self.loses = losses
+        self.loses = loses
         pass
     def updateStats(self):
         pass
