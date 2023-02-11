@@ -1,5 +1,12 @@
 class Game():
-    def __init__(self):
+    def __init__(self,Game_id,Type,Title,Players,Status,Winner,Points):
+        self.Game_id = Game_id
+        self.Type = Type
+        self.Title = Title
+        self.Players = Players
+        self.Status = Status
+        self.Winner =Winner
+        self.Points = Points
         pass
     def startGame(self):
         pass

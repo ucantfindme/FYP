@@ -1,5 +1,10 @@
 class Player():
-    def __init__(self):
+    def __init__(self,Player_id,Name,Password,Email,Points):
+        self.Player_id = Player
+        self.Name = Name
+        self.Password = Password
+        self.Email = Email
+        self.Points = Points
         pass
     def authenticate(self):
         pass
