@@ -1,0 +1,367 @@
+.navbar {
+    overflow: visible;
+    background-color: #333;
+    position: relative;
+    border-radius: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.navbar a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+.navbar a.icon {
+    background: rgba(0, 0, 0, 0);
+    size: 100px;
+    display: block;
+    position: absolute;
+    right: 100000;
+    top: 0;
+}
+
+.navbar .menu {
+    margin-top: 26px;
+    margin-left: 0px;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 100000;
+    top: 0;
+}
+
+.navbar .titleImg {
+    padding-left: 0px;
+    width: 130px;
+    margin-left: 65px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.navbar .dropdown-menu {
+    background-color: #333;
+    color: white;
+    border-color: transparent;
+    left: inherit;
+    right: 0px;
+    width: 190px;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    background-color: #333;
+    padding: 12px 35px;
+    color: white;
+    border-color: none;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.navbar .dropdown-menu .dropdown-item i {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-left: 0px;
+}
+
+.navbar .dropdown-menu .dropdown-item span {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-left: 12px;
+}
+
+#transparent {
+    color: transparent;
+}
+
+#sb {
+    display: none;
+    background-color: #333;
+    color: white;
+}
+
+.sidebar {
+    background-color: #fff;
+    overflow-y: auto;
+    width: var(--side-navbar-size);
+}
+
+.sidebar {
+    background-color: "#FFF";
+    bottom: 0;
+    overflow-y: "scroll";
+    padding-bottom: 10rem;
+    position: fixed;
+    top: 6rem;
+    z-index: 10000;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar .sidebarcategories {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+    width: 100%;
+}
+
+.sidebar .sidebarcategories a {
+    cursor: pointer;
+}
+
+.sidebar .sidebarcategories .sidebarcategory {
+    align-items: left;
+    display: flex;
+    padding: 12px 35px;
+    width: 100%;
+}
+
+.sidebar .sidebarcategories .sidebarcategory:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.sidebar .sidebarcategories .sidebarcategory i {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-left: 0px;
+}
+
+.sidebar .sidebarcategories .sidebarcategory span {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-left: 12px;
+}
+
+#profile-block {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding-bottom: 10px;
+    box-shadow: 5px 10px 10px #6a6a6a;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+table {
+    height: 100%;
+    width: 80%;
+    border-spacing: 20px;
+    font-size: 130%;
+    color: rgb(14, 0, 0);
+    margin-left: 130px;
+}
+
+td {
+    padding: 13px;
+}
+
+input[type=date],
+input[type=text],
+input[type=textarea],
+input[type=password],
+select {
+    width: 80%;
+    padding: 13px 15px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(204, 204, 204, 0.263);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, #23a5d56e, #23d5ab6f);
+    color: rgba(255, 255, 255, 0.904);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.777);
+}
+
+input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.345);
+}
+
+.profile-pic {
+    max-width: 170px;
+    max-height: 170px;
+    display: inline-block;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.p-image {
+    position: absolute;
+    top: 118px;
+    left: 135px;
+    color: #666666;
+}
+
+.upload-button {
+    font-size: 1.4em;
+}
+
+.upload-button:hover {
+    color: #999;
+    cursor: pointer;
+}
+
+#stats-block {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding-bottom: 10px;
+    margin-left: 35px;
+    box-shadow: 5px 10px 10px #6a6a6a;
+}
+
+#graph-block {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding-bottom: 10px;
+    margin-left: 17px;
+    box-shadow: 5px 10px 10px #6a6a6a;
+}
+
+#rules-block {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding-bottom: 10px;
+    max-height: 600px;
+    box-shadow: 5px 10px 10px #6a6a6a;
+    overflow-y: auto;
+}
+
+body {
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    position: relative;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+#rules-block::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f500;
+}
+
+#rules-block::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f500;
+}
+
+#rules-block::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #55555557;
+}
+
+.poster {
+    max-width: 225px;
+    max-height: 450px;
+    box-shadow: 5px 10px 10px #6a6a6a;
+}
+
+#time {
+    position: absolute;
+    margin: 5rem;
+    left: 3rem;
+}
+
+.round-time-bar {
+    margin: 8rem;
+    overflow: hidden;
+    background-color: grey;
+    border-radius: 50px;
+}
+
+.round-time-bar div {
+    height: 18px;
+    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration)) forwards;
+    transform-origin: left center;
+    background: linear-gradient(to bottom, rgb(68, 255, 0), rgb(66, 153, 0));
+    border-radius: 50px;
+    border: #333;
+}
+
+.round-time-bar[data-style="smooth"] div {
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+@keyframes roundtime {
+    to {
+        /* More performant than `width` */
+        transform: scaleX(0);
+    }
+}
+
+#options {
+    margin-top: 2rem;
+    margin-left: 80px;
+}
+
+#option {
+    margin-bottom: 10px;
+    width: 80%;
+    padding: 13px 15px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(204, 204, 204, 0.263);
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #ffffffe5, #bcbcbcc5);
+    color: rgba(27, 27, 27, 0.904);
+}
+
+#option:hover {
+    background: linear-gradient(to bottom, #c2c2c2e5, #787878c5);
+    cursor: pointer;
+}
+
+#hint-button {
+    position: absolute;
+    top: 48rem;
+    left: 15rem;
+    padding: 13px 15px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+}
+
+#next-button {
+    position: absolute;
+    top: 48rem;
+    right: 15rem;
+    padding: 13px 15px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+}
+
+#column2 {
+    background-color: rgba(183, 183, 183, 0.747);
+    border-radius: 20px;
+}
