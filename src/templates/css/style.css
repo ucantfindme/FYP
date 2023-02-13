@@ -1,0 +1,102 @@
+#l {
+    text-align: left;
+}
+
+#c {
+    text-align: center;
+}
+
+#r {
+    text-align: right;
+}
+
+#e {
+    text-align: end;
+}
+
+h1 {
+    font-size: 200%;
+    color: rgba(0, 0, 0, 0.744);
+}
+
+a {
+    color: rgb(168, 168, 168);
+}
+
+.login-block {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding-bottom: 10px;
+}
+
+fieldset {
+    border-color: rgba(89, 149, 172, 0);
+    display: block;
+    margin-top: 0px;
+    padding-top: 0em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 20px groove (internal value);
+}
+
+legend {
+    margin-left: 1px
+}
+
+table {
+    height: 30%;
+    width: 100%;
+    border-spacing: 20px;
+    font-size: 130%;
+    color: rgb(14, 0, 0);
+}
+
+input[type=date],
+input[type=text],
+input[type=textarea],
+input[type=password],
+select {
+    width: 80%;
+    padding: 13px 25px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(204, 204, 204, 0.263);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, #23a5d56e, #23d5ab6f);
+    color: rgba(255, 255, 255, 0.904);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.777);
+}
+
+input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.345);
+}
+
+.button {
+    width: 80%;
+    padding: 13px 135px;
+    background-color: rgba(0, 130, 252, 0.825);
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+    transform: perspective(1px) translateZ(0);
+}
+
+.button:hover {
+    color: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 0 0 4px rgb(0, 130, 252, 0.825);
+    border-color: rgba(0, 130, 252, 0);
+}
+
+body {
+    background-size: cover;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    animation: change 5s ease-in-out infinite;
+    position: relative;
+}

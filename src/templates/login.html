@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Guess It!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="static/app_logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        span {
+            text-decoration: solid;
+            font-size: 90%;
+        }
+        
+        a:hover {
+            color: rgba(236, 163, 86, 0.825);
+        }
+    </style>
+</head>
+
+<body><br><br><br><br><br><br><br>
+    <div class="container-fluid" id="login">
+        <center>
+            <div class="login-block" style="width: 450px;">
+                <form action='/base.html' id='myform' onsubmit="return func()">
+                    <fieldset>
+                        <legend>
+                            <h1> <b> Sign-in</b></h1>
+                        </legend>
+                        <table>
+                            <tr>
+                                <td id='c'><input type='text' placeholder="Username" id='name' required autofocus><span style="display: none; color: rgba(255, 255, 255, 0.779)" id="nam"><br>*only alphabets</span><br></td>
+                            </tr>
+                            <tr>
+                                <td id='c'><input type='password' placeholder="Password" id='password' required>
+                            </tr>
+                            <tr>
+                                <td id="c"><button class="button clip-path" value='submit' id='c' formaction="base.html"><b>submit</b></button></td>
+                            </tr>
+                            <tr>
+                                <td id="e"> <a href="#" id='e'>Click here to registor→</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </center>
+    </div>
+    <script>
+        function allLetter(inputtxt) {
+            var letters = /^[A-Za-z]+$/;
+            return (inputtxt.match(letters))
+        }
+
+        function func() {
+            var count = 0;
+            if (allLetter(document.getElementById("name").value)) {
+                count++;
+                document.getElementById("nam").style.display = "none";
+            } else {
+                document.getElementById("nam").style.display = "inline";
+            }
+            if (count === 1) {
+                return true;
+            } else {
+                alert("Wrong credentials, Please try again");
+                document.getElementById("name").value = "";
+                document.getElementById("password").value = "";
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

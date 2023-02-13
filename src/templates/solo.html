@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1; shrink-to-fit=no">
+    <title>Guess It!</title>
+    <link rel="icon" href="static/app_logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img class="menu" src="static/hamburger-menu.png">
+            </a>
+            <img class="titleImg" src="static/title-image.png">
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("sb");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                        x.style.width = "0px";
+                    } else {
+                        x.style.display = "block";
+                        x.style.width = "250px";
+                    }
+                }
+            </script>
+            <li class="dropdown pull-right" id="settings" style="list-style-type:none;">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="glyphicon glyphicon-cog" style="font-size:larger; margin-top: 0px;"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <button type="button" class="dropdown-item" data-toggle="modal" data-target="#update">
+                        <i class="glyphicon glyphicon-pencil" style="display:inline-block"></i>
+                        <span style="display:inline-block">Edit Profile</span>
+                    </button>
+                    </li>
+                    <li>
+                        <a href="login.html" class="dropdown-item">
+                            <i class="glyphicon glyphicon-log-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </nav>
+    <div class="modal fade" id="update" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title"><b>Update Details</b></h3>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id='updateform' onsubmit="return func()">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <div class="circle">
+                                    <img class="profile-pic" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+                                </div>
+                                <div class="p-image">
+                                    <div class="upload-button"><i class="glyphicon glyphicon-camera"></i></div>
+                                    <input class="upload" type="file" accept="image/*" />
+                                </div>
+                                <script>
+                                    $(document).ready(function() {
+                                        var readURL = function(input) {
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function(e) {
+                                                    $('.profile-pic').attr('src', e.target.result);
+                                                }
+
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        }
+
+
+                                        $(".upload").on('change', function() {
+                                            readURL(this);
+                                        });
+
+                                        $(".upload-button").on('click', function() {
+                                            $(".upload").click();
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-sm-11">
+                                <table>
+                                    <tr>
+                                        <td id='c'><input type='text' placeholder="Username" id='name' required autofocus><span style="display: none; color: rgba(255, 255, 255, 0.779)" id="nam"><br>*only alphabets</span><br></td>
+                                    </tr>
+                                    <tr>
+                                        <td id='c'><input type='text' placeholder="Email" id='name' required></td>
+                                    </tr>
+                                    <tr>
+                                        <td id='c'><input type='password' placeholder="Old Password" id='password' required>
+                                    </tr>
+                                    <tr>
+                                        <td id='c'><input type='password' placeholder="New Password" id='password' required>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <div class="sidebar" id="sb">
+                <div class="sidebarcategories">
+                    <a href="base.html">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Profile</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-king"></i>
+                            <span>Single-Player</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <img class="group" src="static/group.png">
+                            <span>Multi-Player</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="rules.html">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-tasks"></i>
+                            <span>Game Rules</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span>Settings</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories" id="footer">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-copyright-mark"></i>
+                            <span>Version V1.0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <img class="poster" src="static/placeholder-poster.png">
+                    <span id="transparent">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</span>
+                    <img class="poster" src="static/placeholder-poster.png"><br><br><br>
+                </div>
+                <div class="row">
+                    <img class="poster" src="static/placeholder-poster.png">
+                    <span id="transparent">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</span>
+                    <img class="poster" src="static/placeholder-poster.png">
+                </div>
+            </div>
+            <div class="col-sm-4" id="column2">
+                <div class="row">
+                    <span id="time"><h4><b>Time remaining:</b></h4></span>
+                    <div class="round-time-bar" data-style="smooth" style="--duration: 60;">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <table id="options">
+                        <tr>
+                            <td id='option'>Movie 1</td>
+                        </tr>
+                        <tr>
+                            <td id='option'>Movie 2</td>
+                        </tr>
+                        <tr>
+                            <td id='option'>Movie 3</td>
+                        </tr>
+                        <tr>
+                            <td id='option'>Movie 4</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <div>
+                        <button type="button" class="btn btn-default" id="hint-button">Hint</button>
+                        <button type="button" class="btn btn-primary" id="next-button">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="column3">
+                <div class="row">
+
+                </div>
+                <div class="row">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

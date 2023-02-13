@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1; shrink-to-fit=no">
+    <title>Guess It!</title>
+    <link rel="icon" href="static/app_logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img class="menu" src="static/hamburger-menu.png">
+            </a>
+            <img class="titleImg" src="static/title-image.png">
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("sb");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                        x.style.width = "0px";
+                    } else {
+                        x.style.display = "block";
+                        x.style.width = "250px";
+                    }
+                }
+            </script>
+            <li class="dropdown pull-right" id="settings" style="list-style-type:none;">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="glyphicon glyphicon-cog" style="font-size:larger; margin-top: 0px;"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <button type="button" class="dropdown-item" data-toggle="modal" data-target="#update">
+                        <i class="glyphicon glyphicon-pencil" style="display:inline-block"></i>
+                        <span style="display:inline-block">Edit Profile</span>
+                    </button>
+                    </li>
+                    <li>
+                        <a href="login.html" class="dropdown-item">
+                            <i class="glyphicon glyphicon-log-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </nav>
+    <div class="modal fade" id="update" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title"><b>Update Details</b></h3>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id='updateform' onsubmit="return func()">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <div class="circle">
+                                    <img class="profile-pic" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+                                </div>
+                                <div class="p-image">
+                                    <div class="upload-button"><i class="glyphicon glyphicon-camera"></i></div>
+                                    <input class="upload" type="file" accept="image/*" />
+                                </div>
+                                <script>
+                                    $(document).ready(function() {
+                                        var readURL = function(input) {
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function(e) {
+                                                    $('.profile-pic').attr('src', e.target.result);
+                                                }
+
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        }
+
+
+                                        $(".upload").on('change', function() {
+                                            readURL(this);
+                                        });
+
+                                        $(".upload-button").on('click', function() {
+                                            $(".upload").click();
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-sm-11">
+                                <table>
+                                    <tr>
+                                        <td id='c'><input type='text' placeholder="Username" id='name' required autofocus><span style="display: none; color: rgba(255, 255, 255, 0.779)" id="nam"><br>*only alphabets</span><br></td>
+                                    </tr>
+                                    <tr>
+                                        <td id='c'><input type='text' placeholder="Email" id='name' required><span style="display: none; color: rgba(255, 255, 255, 0.779)" id="nam"><br>*only alphabets</span><br></td>
+                                    </tr>
+                                    <tr>
+                                        <td id='c'><input type='password' placeholder="Old Password" id='password' required>
+                                    </tr>
+                                    <tr>
+                                        <td id='c'><input type='password' placeholder="New Password" id='password' required>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <div class="sidebar" id="sb">
+                <div class="sidebarcategories">
+                    <a href="base.html">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Profile</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="solo.html">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-king"></i>
+                            <span>Single-player</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <img class="group" src="static/group.png">
+                            <span>Multi-Player</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="rules.html">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-tasks"></i>
+                            <span>Game Rules</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span>Settings</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebarcategories" id="footer">
+                    <a href="#">
+                        <div class="sidebarcategory">
+                            <i class="glyphicon glyphicon-copyright-mark"></i>
+                            <span>Version V1.0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10" id="rules-block">
+                <fieldset id="fs1">
+                    <legend>
+                        <h1><b>Rules</b></h1>
+                    </legend>
+                    <div>
+                        <h4>
+                            <ol>
+                                <li>
+                                    <h4>Dificuty modes: Easy, Medium, Hard.</h4>
+                                </li>
+                                <li>
+                                    <h4>Types of Movies: Language specific, Country specific, Global.</h4>
+                                </li>
+                                <li>
+                                    <h4>In each game the player will be given 10 question, each carrying 100 points.</h4>
+                                </li>
+                                <li>
+                                    <h4>Each question has a time-limit based on dificulty mode.</h4>
+                                </li>
+                                <li>
+                                    <h4>With in time answering, the extra time will be added to the points awarded.</h4>
+                                </li>
+                                <li>
+                                    <h4>Every wrong answer will be awarded with a negative 50 points.</h4>
+                                </li>
+                                <li>
+                                    <h4>
+                                        Hints are provided.<br>
+                                        <ul>
+                                            <li>First hint causes a negitive 10 to the total points rewarded, i.e, a total of 90(100-10) points will be given to the correct answer.</li><br>
+                                            <li>Second and third hint causes a negitive 20 to the total points rewarded, i.e, a total of 70(100-10-20) or 50(100-10-20-20) points will be given to the correct answer respectivly.</li>
+                                        </ul>
+                                    </h4>
+                                </li>
+                                <li>
+                                    <h4>Titles are given to a player based on final score.<br>
+                                        <ul>
+                                            <li>Above 900 : Film buff/ Game master</li><br>
+                                            <li>700-900 : Movie lover</li><br>
+                                            <li>500-700 : Amateur</li><br>
+                                            <li>200-500 : Noob</li><br>
+                                            <li>Below 200 : Go watch some movies</li><br>
+                                        </ul>
+                                    </h4>
+                                </li>
+                                <li>
+                                    <h4>For Team trivia prior to the game,<br>
+                                        <ul>
+                                            <li>A host will be decided, who decides all the filters needed.</li><br>
+                                            <li>Team divisions are done randomly or the captains can choose.</li><br>
+                                        </ul>
+                                    </h4>
+                                </li>
+                            </ol>
+                        </h4>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
