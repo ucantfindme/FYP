@@ -286,12 +286,13 @@ ul {
 
 #time {
     position: absolute;
-    margin: 5rem;
+    margin-top: 7rem;
+    margin-left: 2rem;
     left: 3rem;
 }
 
 .round-time-bar {
-    margin: 8rem;
+    margin: 11rem;
     overflow: hidden;
     background-color: grey;
     border-radius: 50px;
@@ -317,8 +318,20 @@ ul {
     }
 }
 
+input[type="radio"] {
+    display: none;
+}
+
+.label {
+    padding: 13px 125px;
+    border-radius: 50px;
+    background: transparent;
+    color: rgba(27, 27, 27, 0.904);
+    cursor: pointer;
+}
+
 #options {
-    margin-top: 2rem;
+    margin-top: -5rem;
     margin-left: 80px;
 }
 
@@ -341,18 +354,23 @@ ul {
 
 #hint-button {
     position: absolute;
-    top: 48rem;
+    top: 50rem;
     left: 15rem;
     padding: 13px 15px;
     display: inline-block;
     text-align: center;
     border-radius: 10px;
     width: 100px;
+    background: linear-gradient(to bottom, #ffffffe5, #bcbcbcc5);
+}
+
+#hint-button:hover {
+    background: #787878c5;
 }
 
 #next-button {
     position: absolute;
-    top: 48rem;
+    top: 50rem;
     right: 15rem;
     padding: 13px 15px;
     display: inline-block;
@@ -364,4 +382,22 @@ ul {
 #column2 {
     background-color: rgba(183, 183, 183, 0.747);
     border-radius: 20px;
+}
+
+.row input:checked~.label {
+    color: #2c9c00;
+    font-size: 15px;
+}
+
+#column3 {
+    margin-left: 50px;
+    background-color: rgba(183, 183, 183, 0.747);
+    border-radius: 20px;
+    padding-left: 30px;
+}
+
+hr {
+    padding-left: 10px;
+    border-top: 1px solid #000;
+    margin-left: -15px;
 }

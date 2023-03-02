@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="container-fluid">
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -46,7 +47,7 @@
                     </button>
                     </li>
                     <li>
-                        <a href="login.html" class="dropdown-item">
+                        <a href="./login.html" class="dropdown-item">
                             <i class="glyphicon glyphicon-log-out"></i>
                             <span>Logout</span>
                         </a>
@@ -55,6 +56,7 @@
             </li>
         </div>
     </nav>
+    <!-- Update details modal -->
     <div class="modal fade" id="update" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -125,11 +127,13 @@
 
         </div>
     </div>
+    <!-- Main Body -->
     <div class="main">
         <div>
+            <!-- Sidebar -->
             <div class="sidebar" id="sb">
                 <div class="sidebarcategories">
-                    <a href="base.html">
+                    <a href="./base.html">
                         <div class="sidebarcategory">
                             <i class="glyphicon glyphicon-user"></i>
                             <span>Profile</span>
@@ -137,7 +141,7 @@
                     </a>
                 </div>
                 <div class="sidebarcategories">
-                    <a href="#">
+                    <a href="./solo.html">
                         <div class="sidebarcategory">
                             <i class="glyphicon glyphicon-king"></i>
                             <span>Single-Player</span>
@@ -153,7 +157,7 @@
                     </a>
                 </div>
                 <div class="sidebarcategories">
-                    <a href="rules.html">
+                    <a href="./rules.html">
                         <div class="sidebarcategory">
                             <i class="glyphicon glyphicon-tasks"></i>
                             <span>Game Rules</span>
@@ -180,7 +184,8 @@
         </div>
         <div class="row">
             <div class="col-sm-1"></div>
-            <div class="col-sm-4">
+            <!-- Posters -->
+            <div class="col-sm-4" id="column1">
                 <div class="row">
                     <img class="poster" src="static/placeholder-poster.png">
                     <span id="transparent">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</span>
@@ -192,9 +197,10 @@
                     <img class="poster" src="static/placeholder-poster.png">
                 </div>
             </div>
+            <!-- Options -->
             <div class="col-sm-4" id="column2">
                 <div class="row">
-                    <span id="time"><h4><b>Time remaining:</b></h4></span>
+                    <span id="time"><h4><b>Time remaining:&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Points: </b><div id="points" style="display:inline-block">100</div></h4></span>
                     <div class="round-time-bar" data-style="smooth" style="--duration: 60;">
                         <div></div>
                     </div>
@@ -202,16 +208,30 @@
                 <div class="row">
                     <table id="options">
                         <tr>
-                            <td id='option'>Movie 1</td>
+                            <label class="option">
+                            <td  id='option'>
+                                <input type="radio" class="title" name="movie-title" id="option-1" value="1" required>
+                                <label for="option-1" class="label" id="title-1">Movie 1</label>
+                            </td>
+                            </label>
                         </tr>
                         <tr>
-                            <td id='option'>Movie 2</td>
+                            <td class="option" id='option'>
+                                <input type="radio" class="title" name="movie-title" id="option-2" value="2" required>
+                                <label for="option-2" class="label" id="title-2">Movie 2</label>
+                            </td>
                         </tr>
                         <tr>
-                            <td id='option'>Movie 3</td>
+                            <td class="option" id='option'>
+                                <input type="radio" class="title" name="movie-title" id="option-3" value="3" required>
+                                <label for="option-3" class="label" id="title-3">Movie 3</label>
+                            </td>
                         </tr>
                         <tr>
-                            <td id='option'>Movie 4</td>
+                            <td class="option" id='option'>
+                                <input type="radio" class="title" name="movie-title" id="option-4" value="4" required>
+                                <label for="option-4" class="label" id="title-4">Movie 4</label>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -221,13 +241,35 @@
                         <button type="button" class="btn btn-primary" id="next-button">Next</button>
                     </div>
                 </div>
+                <div class="row">&ensp;</div>
+                <div class="row">&ensp;</div>
+                <div class="row">&ensp;</div>
+                <div class="row">&ensp;</div>
+                <div class="row">&ensp;</div>
+                <div class="row">&ensp;</div>
             </div>
-            <div id="column3">
+            <!-- Score and Hints -->
+            <div class="col-sm-2" id="column3">
+                <div class="row">&ensp;</div>
+                <div class="row">&ensp;</div>
                 <div class="row">
-
+                    <div class="score">
+                        <h4><b>Total score : </b><span id="score">0</span></h4>
+                    </div>
+                    <div class="questions-remained">
+                        <h4><b>Questions remaining : </b><span id="score">10</span></h4>
+                    </div>
                 </div>
+                <hr>
                 <div class="row">
-
+                    <div class="hint">
+                        <h4><b>Hints : </b></h4>
+                        <ul>
+                            <li id="hint-1">Hidden</li>
+                            <li id="hint-2">Hidden</li>
+                            <li id="hint-3">Hidden</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>

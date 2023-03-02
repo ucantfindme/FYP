@@ -15,6 +15,8 @@
 </head>
 
 <body>
+
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="container-fluid">
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -30,7 +32,7 @@
                         x.style.width = "0px";
                     } else {
                         x.style.display = "block";
-                        x.style.width = "245px";
+                        x.style.width = "250px";
                     }
                 }
             </script>
@@ -41,12 +43,12 @@
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li>
                         <button type="button" class="dropdown-item" data-toggle="modal" data-target="#update">
-                            <i class="glyphicon glyphicon-pencil" style="display:inline-block"></i>
-                            <span style="display:inline-block">Edit Profile</span>
-                        </button>
+                        <i class="glyphicon glyphicon-pencil" style="display:inline-block"></i>
+                        <span style="display:inline-block">Edit Profile</span>
+                    </button>
                     </li>
                     <li>
-                        <a href="login.html" class="dropdown-item">
+                        <a href="./login.html" class="dropdown-item">
                             <i class="glyphicon glyphicon-log-out"></i>
                             <span>Logout</span>
                         </a>
@@ -55,6 +57,7 @@
             </li>
         </div>
     </nav>
+    <!-- Update details modal -->
     <div class="modal fade" id="update" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -104,7 +107,7 @@
                                         <td id='c'><input type='text' placeholder="Username" id='name' required autofocus><span style="display: none; color: rgba(255, 255, 255, 0.779)" id="nam"><br>*only alphabets</span><br></td>
                                     </tr>
                                     <tr>
-                                        <td id='c'><input type='text' placeholder="Email" id='name' required><span style="display: none; color: rgba(255, 255, 255, 0.779)" id="nam"><br>*only alphabets</span><br></td>
+                                        <td id='c'><input type='text' placeholder="Email" id='name' required></td>
                                     </tr>
                                     <tr>
                                         <td id='c'><input type='password' placeholder="Old Password" id='password' required>
@@ -125,11 +128,13 @@
 
         </div>
     </div>
+    <!-- Main Body -->
     <div class="main">
         <div>
+            <!-- Sidebar -->
             <div class="sidebar" id="sb">
                 <div class="sidebarcategories">
-                    <a href="base.html">
+                    <a href="./base.html">
                         <div class="sidebarcategory">
                             <i class="glyphicon glyphicon-user"></i>
                             <span>Profile</span>
@@ -137,10 +142,10 @@
                     </a>
                 </div>
                 <div class="sidebarcategories">
-                    <a href="solo.html">
+                    <a href="./solo.html">
                         <div class="sidebarcategory">
                             <i class="glyphicon glyphicon-king"></i>
-                            <span>Single-player</span>
+                            <span>Single-Player</span>
                         </div>
                     </a>
                 </div>
@@ -153,7 +158,7 @@
                     </a>
                 </div>
                 <div class="sidebarcategories">
-                    <a href="rules.html">
+                    <a href="./rules.html">
                         <div class="sidebarcategory">
                             <i class="glyphicon glyphicon-tasks"></i>
                             <span>Game Rules</span>
@@ -178,8 +183,10 @@
                 </div>
             </div>
         </div>
+        <!-- Profile details -->
         <div class="row">
             <div class="col-sm-1"></div>
+            <!-- Profile Block -->
             <div class="col-sm-4" id="profile-block">
                 <fieldset id="fs1">
                     <legend>
@@ -198,6 +205,7 @@
                     </div>
                 </fieldset>
             </div>
+            <!-- Stats Block -->
             <div class="col-sm-6" id="stats-block">
                 <fieldset id="'fs2">
                     <legend>
@@ -224,6 +232,7 @@
                 </fieldset>
             </div>
         </div><br>
+        <!-- Graph block -->
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10" id="graph-block">
