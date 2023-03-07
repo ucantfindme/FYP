@@ -184,98 +184,49 @@
         </div>
         <!-- Profile details -->
         <div class="row">
-            <div class="col-sm-1"></div>
-            <!-- Profile Block -->
-            <div class="col-sm-4" id="profile-block">
-                <fieldset id="fs1">
-                    <legend>
-                        <h1><b>Profile</b></h1>
-                    </legend>
-                    <div>
-                        <center><img src="static/avatar.png" alt="Avatar" class="avatar"></center>
-                        <span>
-                            <h3 style="display:inline-block"><b>Username : </b></h3>
-                            <h4 style="display:inline-block"> Mr.Note</h4><br>
-                        </span>
-                        <span>
-                            <h3 style="display:inline-block"><b>Email : </b></h3>
-                            <h4 style="display:inline-block"> mr.note1006@gmail.com</h4>
-                        </span>
-                    </div>
-                </fieldset>
-            </div>
-            <!-- Stats Block -->
-            <div class="col-sm-6" id="stats-block">
-                <fieldset id="'fs2">
-                    <legend>
-                        <h1><b>Stats</b></h1>
-                    </legend>
-                    <div>
-                        <span>
-                            <h3 style="display:inline-block"><b>Games Played : </b></h3>
-                            <h4 style="display:inline-block">10</h4><br>
-                        </span>
-                        <span>
-                            <h3 style="display:inline-block"><b>Trophies : </b></h3>
-                            <h4 style="display:inline-block">2</h4><br>
-                        </span>
-                        <span>
-                            <h3 style="display:inline-block"><b>High Score : </b></h3>
-                            <h4 style="display:inline-block">1000   </h4><br>
-                        </span>
-                        <span>
-                            <h3 style="display:inline-block"><b>Rating : </b></h3>
-                            <h4 style="display:inline-block">1492   </h4><br><br><br>
-                        </span>
-                    </div>
-                </fieldset>
-            </div>
-        </div><br>
-        <!-- Graph block -->
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10" id="graph-block">
-                <fieldset id="'fs3">
-                    <legend>
-                        <h2><b>Progress </b></h2>
-                    </legend>
-                    <div>
-                        <canvas id="myChart" style="height:180px;width:100%;max-width:1600px"></canvas>
-                        <script>
-                            var xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-                            var yValues = [480, 730, 980, 1000, 860, 900, 780, 800, 1000, 880];
-
-                            new Chart("myChart", {
-                                type: "line",
-                                data: {
-                                    labels: xValues,
-                                    datasets: [{
-                                        fill: false,
-                                        lineTension: 0,
-                                        backgroundColor: "rgba(0,0,255,1.0)",
-                                        borderColor: "rgba(0,0,255,0.1)",
-                                        data: yValues
-                                    }]
-                                },
-                                options: {
-                                    legend: {
-                                        display: false
-                                    },
-                                    scales: {
-                                        yAxes: [{
-                                            ticks: {
-                                                min: 0,
-                                                stepSize: 500,
-                                                steps: 2,
-                                                max: 1000
-                                            }
-                                        }],
-                                    }
+            <button type="button" class="btn btn-primary" id="start-button" data-toggle="modal" data-target="#start">Start</button>
+            <!-- Game details modal -->
+            <div class="modal fade" id="start" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title"><b>Game Details</b></h3>
+                        </div>
+                        <div class="modal-body">
+                            <form action="./solo.html" id='startform' class="modal-form" onsubmit="return solo_save()">
+                                <div class="form-row">
+                                    <label for="language">Language</label>
+                                    <select class="select" name="language">
+                                        <option value="">Pick-an-option</option>
+                                        <option value="ind">Indian Specific</option>
+                                        <option value="east">Eastern Specific</option>
+                                        <option value="west">Western Specific</option>
+                                        <option value="global">Global</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <label for="difficulty">Difficulty</label>
+                                    <select class="select" name="difficulty">
+                                        <option value="">Pick-an-option</option>
+                                        <option value="easy">Easy</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="hard">Hard</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer" id="start-modal-footer">
+                                    <button type="submit" class="btn btn-primary" value="submit" formaction="./solo.html">Save</button>
+                                </div>
+                            </form>
+                            <script>
+                                function solo_save() {
+                                    return true;
                                 }
-                            });
-                        </script>
+                            </script>
+                        </div>
                     </div>
-                </fieldset>
+
+                </div>
             </div>
         </div>
     </div>
