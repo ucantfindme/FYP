@@ -559,7 +559,7 @@ hr {
 
 #start-button {
     margin-top: 5%;
-    margin-left: 45%;
+    margin-left: 47%;
     width: 15%;
     height: 30px;
     background-color: transparent;
@@ -588,12 +588,12 @@ hr {
     max-height: 200px;
     z-index: -30;
     margin-top: 19rem;
-    margin-left: 47rem;
+    margin-left: 50rem;
 }
 
 #app-logo {
     margin-top: 1rem;
-    margin-left: 51rem;
+    margin-left: 54rem;
 }
 
 .container {
