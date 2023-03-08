@@ -206,6 +206,11 @@ input:focus {
     display: inline-block;
 }
 
+.modal-content {
+    position: center;
+    margin-top: 20%;
+}
+
 input[type=file] {
     display: none;
 }
@@ -400,4 +405,55 @@ hr {
     padding-left: 10px;
     border-top: 1px solid #000;
     margin-left: -15px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
+}
+
+#start-modal-footer {
+    margin-left: 85%;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0.4rem 0.4rem;
+    font-size: medium;
+}
+
+.form-row:nth-child(odd) {
+    background: #f2f2f2;
+}
+
+.form-row label {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+}
+
+.form-row input,
+.form-row select {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    background-color: rgba(0, 0, 0, 0.447);
+    border: 1px solid hsl(0, 0%, 90%);
+    padding: 0.2rem 0.2rem;
+    max-width: 50%;
 }
