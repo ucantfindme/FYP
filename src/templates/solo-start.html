@@ -182,50 +182,77 @@
                 </div>
             </div>
         </div>
-        <!-- Profile details -->
         <div class="row">
-            <button type="button" class="btn btn-primary" id="start-button" data-toggle="modal" data-target="#start">Start</button>
-            <!-- Game details modal -->
-            <div class="modal fade" id="start" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h3 class="modal-title"><b>Game Details</b></h3>
+            <div class="col-sm-1"></div>
+            <!-- Curtain Block -->
+            <div class="col-sm-10" id="curtain-block">
+                <div id="stage">
+                    <div id="curtain-left" class="curtain"></div>
+                    <div id="curtain-right" class="curtain"></div>
+                    <div id="balance" class="balance"></div>
+                    <div class="spotlight">
+                        <div class="start-image">
+                            <img src="static/start-logo.png" id="start-logo" alt="start">
+                            <img src="static/title-image.png" id="app-logo" alt="name-logo">
                         </div>
-                        <div class="modal-body">
-                            <form action="./solo.html" id='startform' class="modal-form" onsubmit="return solo_save()">
-                                <div class="form-row">
-                                    <label for="language">Language</label>
-                                    <select class="select" name="language">
-                                        <option value="">Pick-an-option</option>
-                                        <option value="ind">Indian Specific</option>
-                                        <option value="east">Eastern Specific</option>
-                                        <option value="west">Western Specific</option>
-                                        <option value="global">Global</option>
-                                    </select>
+                        <button type="button" class="btn" id="start-button" data-toggle="modal" data-target="#start">
+                        <div class="container">
+                            <div class="button">
+                                <div class="line-container">
+                                    <span class="text">Start</span>
+                                    <div class="line line--top-left line--thick thick-line--short"></div>
+                                    <div class="line line--top-right line--thick thick-line--short"></div>
+                                    <div class="line line--bottom-left line--thick thick-line--long"></div>
+                                    <div class="line line--bottom-right line--thick thick-line--long"></div>
+                                    <div class="line line--top line--thin"></div>
+                                    <div class="line line--bottom line--thin"></div>
                                 </div>
-                                <div class="form-row">
-                                    <label for="difficulty">Difficulty</label>
-                                    <select class="select" name="difficulty">
-                                        <option value="">Pick-an-option</option>
-                                        <option value="easy">Easy</option>
-                                        <option value="medium">Medium</option>
-                                        <option value="hard">Hard</option>
-                                    </select>
+                            </div>
+                        </div>
+                        </button>
+                    </div>
+                    <!-- Game details modal -->
+                    <div class="modal fade" id="start" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title"><b>Game Details</b></h3>
                                 </div>
-                                <div class="modal-footer" id="start-modal-footer">
-                                    <button type="submit" class="btn btn-primary" value="submit" formaction="./solo.html">Save</button>
+                                <div class="modal-body">
+                                    <form action="./solo.html" id='startform' class="modal-form" onsubmit="return solo_save()">
+                                        <div class="form-row">
+                                            <label for="language">Language</label>
+                                            <select class="select" name="language">
+                                                <option value="">Pick-an-option</option>
+                                                <option value="ind">Indian Specific</option>
+                                                <option value="east">Eastern Specific</option>
+                                                <option value="west">Western Specific</option>
+                                                <option value="global">Global</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <label for="difficulty">Difficulty</label>
+                                            <select class="select" name="difficulty">
+                                                <option value="">Pick-an-option</option>
+                                                <option value="easy">Easy</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="hard">Hard</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer" id="start-modal-footer">
+                                            <button type="submit" class="btn btn-primary" value="submit" formaction="./solo.html">Start</button>
+                                        </div>
+                                    </form>
+                                    <script>
+                                        function solo_save() {
+                                            return true;
+                                        }
+                                    </script>
                                 </div>
-                            </form>
-                            <script>
-                                function solo_save() {
-                                    return true;
-                                }
-                            </script>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
