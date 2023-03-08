@@ -457,3 +457,289 @@ hr {
     padding: 0.2rem 0.2rem;
     max-width: 50%;
 }
+
+#curtain-block {
+    max-width: 140rem;
+    height: 65rem;
+    background-color: rgb(110, 110, 110);
+    overflow: hidden;
+}
+
+#stage {
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+.curtain {
+    position: absolute;
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), #b00000, rgba(204, 0, 0, 0.993), #b00000), -moz-linear-gradient(right, rgba(204, 0, 0, 0.997), rgba(188, 0, 0, 0.999), rgba(204, 0, 0, 0.998));
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), #b00000, rgba(204, 0, 0, 0.993), #b00000), -o-linear-gradient(right, rgba(204, 0, 0, 0.997), rgba(188, 0, 0, 0.999), rgba(204, 0, 0, 0.998));
+    background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0), #b00000, rgba(204, 0, 0, 0.993), #b00000), -webkit-linear-gradient(right, rgba(204, 0, 0, 0.997), rgba(188, 0, 0, 0.999), rgba(204, 0, 0, 0.998));
+    background: linear-gradient(to left, rgba(255, 0, 0, 0), #b00000, rgba(204, 0, 0, 0.993), #b00000), linear-gradient(to left, rgba(204, 0, 0, 0.997), rgba(188, 0, 0, 0.999), rgba(204, 0, 0, 0.998));
+    background-size: 67px 67px, 53px 53px;
+    width: 60%;
+    height: 100%;
+    margin-left: -10%;
+    transition: width 4s, -webkit-transform 2s;
+}
+
+.balance {
+    position: absolute;
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), #840000, rgb(230, 0, 0.993), #840000), -moz-linear-gradient(right, rgba(230, 0, 0, 0.997), rgba(218, 0, 0, 0.999), rgba(230, 0, 0, 0.998));
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), #840000, rgb(230, 0, 0.993), #840000), -o-linear-gradient(right, rgba(230, 0, 0, 0.997), rgba(218, 0, 0, 0.999), rgba(230, 0, 0, 0.998));
+    background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0), #840000, rgb(230, 0, 0.993), #840000), -webkit-linear-gradient(right, rgba(230, 0, 0, 0.997), rgba(218, 0, 0, 0.999), rgba(230, 0, 0, 0.998));
+    background: linear-gradient(to left, rgba(255, 0, 0, 0), #840000, rgb(230, 0, 0.993), #840000), linear-gradient(to left, rgba(230, 0, 0, 0.997), rgba(218, 0, 0, 0.999), rgba(230, 0, 0, 0.998));
+    background-size: 71px 71px, 59px 53px;
+    background-size: 79px 79px, 61px 61px;
+    width: 100%;
+    height: 15%;
+    transition: height 2s 1s;
+}
+
+#curtain-right {
+    right: 0;
+    margin-right: -10%;
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    background: -moz-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 60%), -moz-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 40%);
+    background: -o-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 60%), -o-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 40%);
+    background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 60%), -webkit-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 40%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 60%), radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 40%);
+    background-attachment: inherit;
+    background-position: -80px 10, 80px 0;
+}
+
+#stage:hover #curtain-left {
+    width: 250px;
+    z-index: 10;
+    -webkit-transform: matrix(1, 0, -0.3, 1, 0, 0);
+    -moz-transform: matrix(1, 0, -0.3, 1, 0, 0);
+    -ms-transform: matrix(1, 0, -0.3, 1, 0, 0);
+    -o-transform: matrix(1, 0, -0.3, 1, 0, 0);
+}
+
+#stage:hover #curtain-right {
+    width: 250px;
+    z-index: 10;
+    -webkit-transform: matrix(-1, 0, 0.3, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0.3, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0.3, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0.3, 1, 0, 0);
+}
+
+#stage:hover .balance {
+    z-index: 30;
+    height: 50px;
+}
+
+#stage .button {
+    display: none;
+    z-index: 1;
+}
+
+#stage .start-image {
+    display: none;
+    z-index: 1;
+}
+
+#stage:hover .start-image {
+    display: block;
+}
+
+#start-button {
+    margin-top: 5%;
+    margin-left: 45%;
+    width: 15%;
+    height: 30px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#start-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#stage:hover .button {
+    margin-left: -90%;
+    z-index: -30;
+    display: block;
+    text-align: center;
+    border-width: 1px 0px 1px 0;
+    border-style: solid;
+    border-image: linear-gradient(to left, transparent, rgba(224, 132, 0, 0.4), transparent);
+    border-image-slice: 1;
+    cursor: pointer;
+}
+
+#start-logo {
+    max-width: 300px;
+    max-height: 200px;
+    z-index: -30;
+    margin-top: 19rem;
+    margin-left: 47rem;
+}
+
+#app-logo {
+    margin-top: 1rem;
+    margin-left: 51rem;
+}
+
+.container {
+    max-width: 200px;
+    z-index: 0;
+    margin: auto;
+    height: 200px;
+    padding-top: 10px;
+}
+
+.text {
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6em;
+    color: rgba(255, 239, 199, 1);
+    text-shadow: 0 0 13px rgba(76, 33, 4, 0.79), 0 0 32px rgba(255, 187, 24, 0.6);
+    display: block;
+    margin-bottom: -4px;
+    margin-top: 1px;
+    width: 100%;
+}
+
+.line-container {
+    width: 230px;
+    margin: auto;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+}
+
+.line--thick {
+    width: 6px;
+    background-color: rgba(255, 239, 199, 1);
+}
+
+.line--thin {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(to left, rgba(255, 239, 199, 0.8), rgba(224, 132, 0, 0.4), rgba(224, 132, 0, 0.4), rgba(224, 132, 0, 0.4), rgba(255, 239, 199, 0.8));
+}
+
+.thick-line--short {
+    height: 15px;
+    top: -16px;
+}
+
+.thick-line--long {
+    height: 40px;
+    top: -1px;
+}
+
+.line--top-right {
+    right: 0;
+    transform: skew(45deg);
+    box-shadow: 0px 0px 13px rgba(226, 97, 11, 0.85), -12px -8px 25px 3px rgba(226, 97, 11, 0.8);
+}
+
+.line--top-left {
+    left: 0px;
+    transform: skew(-45deg);
+    box-shadow: 12px -8px 25px 3px rgba(226, 97, 11, 0.8), 0px 0px 13px rgba(226, 97, 11, 0.85);
+}
+
+.line--bottom-right {
+    right: 12px;
+    transform: skew(-45deg);
+    box-shadow: -12px 3px 22px 3px rgba(226, 97, 11, 0.8), 0px 0px 13px rgba(226, 97, 11, 0.85);
+}
+
+.line--bottom-left {
+    left: 12px;
+    transform: skew(45deg);
+    box-shadow: 12px 3px 22px 3px rgba(226, 97, 11, 0.8), 0px 0px 13px rgba(226, 97, 11, 0.85);
+}
+
+.line--top {
+    width: 214px;
+    top: -17px;
+    left: 8px;
+    box-shadow: 0px 5px 34px 5px rgba(251, 169, 40, 0.26);
+}
+
+.line--bottom {
+    width: 160px;
+    top: 38px;
+    left: 35px;
+    box-shadow: 0px -5px 34px 5px rgba(251, 169, 40, 0.26);
+}
+
+.pseudo-class-shadow {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 22px;
+}
+
+.line-container::before {
+    @extend .pseudo-class-shadow;
+    width: 40px;
+    box-shadow: -20px 10px 45px 4px rgba(251, 169, 40, 0.8);
+}
+
+.line-container::after {
+    @extend .pseudo-class-shadow;
+    width: 40px;
+    box-shadow: 207px -12px 45px 4px rgba(251, 169, 40, 0.8);
+}
+
+.line--top-left::before {
+    @extend .pseudo-class-shadow;
+    box-shadow: 28px 20px 34px 3px rgba(251, 169, 40, 0.8);
+}
+
+.line--top-left::after {
+    @extend .pseudo-class-shadow;
+    box-shadow: 48px 20px 34px 3px rgba(251, 169, 40, 0.8);
+}
+
+.line--top-right::before {
+    @extend .pseudo-class-shadow;
+    box-shadow: -48px 20px 34px 3px rgba(251, 169, 40, 0.8);
+}
+
+.line--top-right::after {
+    @extend .pseudo-class-shadow;
+    box-shadow: -58px 20px 34px 3px rgba(251, 169, 40, 0.8);
+}
+
+.line--bottom-right::before {
+    @extend .pseudo-class-shadow;
+    box-shadow: -42px 9px 44px 5px rgba(251, 169, 40, 0.66);
+}
+
+.line--bottom-right::after {
+    @extend .pseudo-class-shadow;
+    box-shadow: -52px 10px 44px 5px rgba(251, 169, 40, 0.66);
+}
+
+.line--bottom-left::before {
+    @extend .pseudo-class-shadow;
+    box-shadow: 32px 10px 44px 5px rgba(251, 169, 40, 0.66);
+}
+
+.line--bottom-left::after {
+    @extend .pseudo-class-shadow;
+    box-shadow: 42px 10px 44px 5px rgba(251, 169, 40, 0.66);
+}
