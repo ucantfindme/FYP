@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Home</h1>
+  <p>
+    You are viewing Homepage! Welcome 
+    {% if user.is_authenticated%}
+       {{user}}
+    {% else%}
+        Guest
+    {% endif%}
+  </p>
+{% endblock %}
