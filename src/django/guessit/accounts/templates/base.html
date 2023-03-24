@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Guess It</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            header{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                background-color: PaleTurquoise;
+            }
+            footer{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2.5rem;
+                background-color: PaleTurquoise;          
+            }
+            .body{
+                position: relative;
+                top: 100px;
+                background-color: seashell; 
+            }
+        </style>
+    </head>
+    <body>
+        {% include 'partials/header.html'%}
+        <br>
+        <br>
+        <br>
+        <center>
+            <div class="body">
+                <br>
+                {% block content%}
+                {% endblock%}
+                <br>
+            </div>
+        </center>
+        {% include 'partials/footer.html'%}
+    </body>
+</html>

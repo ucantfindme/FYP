@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <h1>Game Round</h1>
+    <p>
+        Here's the Images, Now time to Guess IT!
+    </p>
+    <table>
+        <tr>
+            <td><img src={{p1}} alt="Pic-1" width="200px" height="200px"></td>
+            <td><img src={{p2}} alt="Pic-2" width="200px" height="200px"></td>
+            <td><img src={{p3}} alt="Pic-3" width="200px" height="200px"></td>
+        </tr>
+    </table>
+    <table>
+        <th>
+            <td>Hints</td>
+            <td>Current points: </td>
+            <td>{{points}}</td>
+        </th>
+        <tr>
+            <td><button>Hint-1</button></td>
+            <td>Genre</td>
+            <td>{{genre}}</td>
+        </tr>
+        <tr>
+            <td><button>Hint-2</button></td>
+            <td>Year</td>
+            <td>{{year}}</td>
+        </tr>
+        <tr>
+            <td><button>Hint-3</button></td>
+            <td>Cast</td>
+            <td>{{cast}}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><button>{{opt1}}</button></td>
+            <td><button>{{opt2}}</button></td>
+        </tr>
+        <tr>
+            <td><button>{{opt3}}</button></td>
+            <td><button>{{opt4}}</button></td>
+        </tr>
+    </table>
+</center>
+{% endblock %}
