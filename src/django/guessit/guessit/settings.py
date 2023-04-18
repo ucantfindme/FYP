@@ -25,7 +25,7 @@ SECRET_KEY = '123'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://guess-it-fyp-test.herokuapp.com/','*','127.0.0.1']
+ALLOWED_HOSTS = ['guess-it-fyp-test.herokuapp.com/','*','127.0.0.1']
 
 
 # Application definition
