@@ -1,0 +1,122 @@
+body {
+    height: 100%;
+    font-family: 'Encode Sans', sans-serif;
+    margin: 0;
+    background-image: url(../static/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* navigation bar */
+
+#nav {
+    border-radius: 0px;
+    background: #292929;
+    padding: 10px;
+    font-size: 17px;
+    position: fixed;
+    width: 100%;
+    z-index: 40;
+}
+
+.logo {
+    width: 60%;
+}
+
+#logo {
+    padding-top: 0px;
+}
+
+#link a {
+    color: #c8c8c8;
+    margin: 0 10px 0 10px;
+    letter-spacing: 1.5px;
+}
+
+#link a:hover {
+    color: #292929;
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    background-color: #292929;
+    font-size: 17px;
+}
+
+.dropdown-menu>li>a {
+    padding: 8px 20px;
+}
+
+.dropdown:hover>ul,
+.dropdown-menu:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+#mail {
+    border-color: transparent;
+    background: transparent;
+}
+
+#button-link,
+#toogle-button {
+    color: #f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom, #fa6a48, #d43c1a);
+    line-height: 17px;
+}
+
+#button-link:hover {
+    background-color: #f4f0f0;
+    color: #292929
+}
+
+
+/* navigation bar end */
+
+
+/* Muti-Player Modal */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 380px;
+    min-width: 320px;
+}
+
+.modal-content {
+    background-color: #292929;
+    color: white;
+    max-width: 380px;
+}
+
+.modal-content .close {
+    color: white;
+}
+
+.modal-body {
+    text-align: center;
+    font-size: medium;
+}
+
+.modal-body .loader {
+    padding: 10px;
+}
+
+#camera-body,
+#reel-1,
+#reel-2 {
+    fill: #fff;
+    fill-opacity: 0.95;
+    stroke: none;
+}
+
+
+/* Multi-player modal end */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guess It!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+</head>
+
+<body>
+    <nav id="nav" class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" id="toogle-button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>                     
+                </button>
+                <a id="logo" class="navbar-brand" href="#"><img class="logo" src="./static/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul id="link" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript:void(0); "><i class="fas fa-info-circle "></i>&nbsp;About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0); "><i class="fab fa-teamspeak "></i>&nbsp;Contact us</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:void(0);">
+                                    <button id="mail" onclick="copy()" onmouseout="outFunc()" title="Click to copy">
+                                        <i class="fas fa-envelope"></i>&nbsp;&nbsp;
+                                        <span id=gmail>guessit@gmail.com</span>
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href='./sign-in.html'><i class="fas fa-sign-in-alt"></i>&nbsp;Sign In</a>
+                    </li>
+                    <li id="button-link">
+                        <a href="./register.html"><i class="fas fa-save"></i>Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="box">
+            <div class="left" style="background-color: #292929;">
+                <img src="./static/guess.png" id="guess">
+            </div>
+            <div class="right">
+                <div id="context">
+                    <span id="head">SIGN IN TO YOUR ACCOUNT</span>
+                    <br><br>
+                    <div id="break"><br></div>
+                    <button id="sign-in" onclick="location.href='./sign-in.html'"><span id="fas"><i class="fas fa-sign-in-alt"></i></span>&nbsp;Sign In</button>
+                    <button id="sign-up" onclick="location.href='./register.html'"><span id="fas"><i class="fas fa-save"></i></i></span>&nbsp;Sign Up</button>
+                    <div id="divider">
+                        <span id="or"><b>(or)</b></span>
+                    </div>
+                    <button id="guest" onclick="location.href='./guest.html'"><span id="fas"><i class="fas fa-sign-in-alt"></i></span>&nbsp;Sign In as Guest</button><br><br>
+                    <span id="foot">By creating this account, you agree to our Privacy Policy & Cookie Policy.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/base.js"></script>
+</body>
+
+</html>

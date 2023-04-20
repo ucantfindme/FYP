@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guess It!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/sign-in.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="left" id="left">
+                <div class="flip">
+                    <div class="inside" id="inside">
+                        <div class="front">
+                            <div class="login">Login</div>
+                            <div class="text">Use your Username and password. If you dont have a account please <a onclick="flip()">register</a>.</div>
+                        </div>
+                        <div class="back">
+                            <div class="login">Register</div>
+                            <div class="text">
+                                Username can contain letters, digits and @/./+/-/_ only. Your password can&#8217;t be too similar to your other personal information or entirely numeric. Password must contain at least 8 characters.
+                                <!--Use your email and password to register. Password should contain atleast a capital letter, a small letter, a special character and a number.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right" id="right">
+                <div id="login">
+                    <svg viewBox="0 0 320 300">
+                        <defs>
+                        <linearGradient
+                                        inkscape:collect="always"
+                                        id="linearGradient"
+                                        x1="13"
+                                        y1="193.49992"
+                                        x2="307"
+                                        y2="193.49992"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop
+                                style="stop-color:#ff00ff;"
+                                offset="0"
+                                id="stop876" />
+                            <stop
+                                style="stop-color:#ff0000;"
+                                offset="1"
+                                id="stop878" />
+                        </linearGradient>
+                        </defs>
+                        <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                    </svg>
+                    <div class="form">
+                        <label for="text">Username</label>
+                        <input type="text" id="username">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                        <input type="submit" id="submit" value="Login">
+                    </div>
+                </div>
+                <div class="registration" id="register">
+                    <button type="button" class="close" onclick="rflip()">&times;</button>
+                    <div class="rform">
+                        <label for="text">Username</label>
+                        <input type="text" id="r-username">
+                        <label for="email">Email</label>
+                        <input type="email" id="r-email">
+                        <label for="password">Password</label>
+                        <input type="password" id="r-password">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" id="r-cpassword">
+                        <input type="submit" id="submit" value="Register">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+    <script src="./js/sign-in.js"></script>
+</body>
+
+</html>

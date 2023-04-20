@@ -1,0 +1,248 @@
+body {
+    height: 100%;
+    font-family: 'Encode Sans', sans-serif;
+    margin: 0;
+    background-image: url(../static/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* navigation bar */
+
+#nav {
+    border-radius: 0px;
+    background: #292929;
+    padding: 10px;
+    font-size: 17px;
+    position: fixed;
+    width: 100%;
+    z-index: 40;
+}
+
+.logo {
+    width: 60%;
+}
+
+#logo {
+    padding-top: 0px;
+}
+
+#link a {
+    color: #c8c8c8;
+    margin: 0 10px 0 10px;
+    letter-spacing: 1.5px;
+}
+
+#link a:hover {
+    color: #292929;
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    background-color: #292929;
+    font-size: 17px;
+}
+
+.dropdown-menu>li>a {
+    padding: 8px 20px;
+}
+
+.dropdown:hover>ul,
+.dropdown-menu:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+#mail {
+    border-color: transparent;
+    background: transparent;
+}
+
+#button-link,
+#toogle-button {
+    color: #f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom, #fa6a48, #d43c1a);
+    line-height: 17px;
+}
+
+#button-link:hover {
+    background: #f4f0f0;
+    color: #292929
+}
+
+
+/* navigation bar end */
+
+
+/* main content */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    position: absolute;
+    place-content: center;
+    width: calc(100% - 30px);
+    top: 30px;
+}
+
+.box {
+    display: flex;
+    height: 500px;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.left {
+    background: #292929;
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+#guess {
+    max-width: 80%;
+    margin-top: 125px;
+    margin-left: 40px;
+}
+
+.right {
+    background: #f2f2f2;
+    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+    color: grey;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+#context {
+    margin-top: 60px;
+}
+
+#head {
+    font-size: 25px;
+}
+
+#break {
+    display: contents;
+}
+
+#divider {
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid #808795;
+    line-height: 0.1em;
+    margin: -20px 0 20px;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#or {
+    background-color: #f2f2f2;
+    padding: 7px;
+}
+
+#foot {
+    font-size: smaller;
+}
+
+#sign-in,
+#sign-up,
+#guest {
+    color: #f2f2f2;
+    width: calc(100% - 150px);
+    height: 40px;
+    font-size: 20px;
+    border: transparent;
+    margin: 4px;
+}
+
+#fas {
+    display: none;
+}
+
+#sign-in {
+    background-image: linear-gradient(to bottom, #35df73, #0f9d58);
+}
+
+#sign-in:hover {
+    background-image: linear-gradient(to bottom, #28af59, #0a7340);
+    color: white;
+}
+
+#guest {
+    background-image: linear-gradient(to bottom, #fa6a48, #d43c1a)
+}
+
+#guest:hover {
+    background-image: linear-gradient(to bottom, #cc5439, #a53015);
+    color: white;
+}
+
+#sign-up {
+    background-image: linear-gradient(to bottom, #38afef, #137ab1);
+}
+
+#sign-up:hover {
+    background-image: linear-gradient(to bottom, #3199d0, #146895);
+    color: white;
+}
+
+@media (max-width: 1040px) {
+    .main {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .box {
+        flex-direction: column;
+        height: 630px;
+        width: 320px;
+    }
+    .left {
+        height: 30%;
+        width: 100%;
+        max-height: 270px;
+    }
+    #guess {
+        max-width: 60%;
+        margin-top: 15px;
+        margin-left: 65px;
+    }
+    .right {
+        flex-shrink: 0;
+        height: 70%;
+        width: 100%;
+        max-height: 350px;
+    }
+    #context {
+        margin-top: 20px;
+    }
+    #head {
+        font-size: 20px;
+    }
+    #break {
+        display: none;
+    }
+    #sign-in,
+    #sign-up,
+    #guest {
+        width: calc(100% - 80px);
+        font-size: 15px;
+    }
+    #foot {
+        font-size: x-small;
+    }
+}
+
+
+/* main content end */

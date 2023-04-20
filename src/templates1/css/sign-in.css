@@ -1,0 +1,249 @@
+html {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    background-image: url(../static/background.jpg);
+    background-position: center;
+    background-size: contain;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 30px);
+    position: absolute;
+    place-content: center;
+    width: calc(100% - 30px);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    height: 320px;
+    margin: 0 auto;
+    width: 640px;
+}
+
+.left {
+    background: transparent;
+    height: calc(100% - 40px);
+    top: 20px;
+    position: relative;
+    width: 50%;
+}
+
+.right {
+    background: #272626df;
+    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+    color: #F1F1F2;
+    position: relative;
+    width: 50%;
+}
+
+.flip {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    perspective: 800px;
+}
+
+.inside {
+    position: relative;
+    background-color: #F1F1F2;
+    width: 320px;
+    height: 280px;
+    color: rgba(0, 0, 0, 0.821);
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out;
+}
+
+.back {
+    transform: rotateY(0.5turn);
+    width: 320px;
+    height: 360px;
+    top: -35px;
+    background: #F1F1F2;
+}
+
+.login {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 40px 40px 40px;
+}
+
+.text {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 40px;
+}
+
+svg {
+    position: absolute;
+    width: 320px;
+}
+
+path {
+    fill: none;
+    stroke: url(#linearGradient);
+    stroke-width: 4;
+    stroke-dasharray: 240 1386;
+}
+
+.registration {
+    background: #201f1fdf;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+    clip-path: circle(0%);
+    top: -70px;
+    height: 450px;
+    transition: clip-path 1s;
+}
+
+button.close {
+    display: flex;
+    justify-content: right;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: 18px;
+    margin-right: 18px;
+}
+
+.form {
+    margin: 40px;
+    position: absolute;
+}
+
+label {
+    color: #c2c2c5;
+    display: block;
+    font-size: 14px;
+    height: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+input {
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    outline: none !important;
+    width: 100%;
+}
+
+input::-webkit-focus-inner {
+    border: 0;
+}
+
+#submit {
+    position: relative;
+    color: #707075;
+    margin-top: 40px;
+    transition: color 300ms;
+}
+
+#submit:focus {
+    color: #f2f2f2;
+}
+
+#submit:active {
+    color: #d0d0d2;
+}
+
+.rform {
+    margin: 40px;
+    position: fixed;
+}
+
+.rform input {
+    background: #7070757a;
+    padding-left: 15px;
+    border-radius: 12px;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    outline: none !important;
+    width: 75%;
+}
+
+.rform #submit {
+    margin-top: 40px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #ff25ff, #bd4040);
+    box-shadow: 0px 0px 0px #ff00ff;
+    width: 60%;
+    height: 40px;
+    left: 28px;
+    padding: 1px;
+    font-size: 16px;
+    color: white;
+}
+
+.rform #submit:hover {
+    box-shadow: 0px 0px 30px #f04923;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .box {
+        flex-direction: column;
+        height: 1000px;
+        width: 320px;
+    }
+    .left {
+        height: 100%;
+        left: 15px;
+        width: calc(100% - 40px);
+        max-height: 270px;
+    }
+    .flip {
+        left: 20px;
+    }
+    #submit {
+        left: -12px;
+    }
+    .back {
+        left: -20px;
+    }
+    .right {
+        flex-shrink: 0;
+        height: 100%;
+        width: 110%;
+        max-height: 350px;
+    }
+    .text {
+        color: #515151;
+    }
+    .registration {
+        top: 0px;
+    }
+}
